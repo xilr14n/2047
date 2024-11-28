@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=4 uid="uid://200qgeg6qeom"]
+
+[ext_resource type="Script" path="res://tabuleiro.gd" id="1_lb77u"]
+[ext_resource type="Texture2D" uid="uid://b80clqw13m0dn" path="res://rect35.png" id="2_qj1qx"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jaytb"]
+texture = ExtResource("2_qj1qx")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_o3udd"]
+tile_size = Vector2i(128, 128)
+sources/0 = SubResource("TileSetAtlasSource_jaytb")
+
+[node name="Tabuleiro" type="Node2D"]
+script = ExtResource("1_lb77u")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAADAAEAAAAAAAAAAAADAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAABAAMAAAAAAAAAAAACAAMAAAAAAAAAAAADAAMAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_o3udd")

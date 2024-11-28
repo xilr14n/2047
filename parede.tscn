@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbee00hd1hjsl"]
+
+[ext_resource type="Script" path="res://parede.gd" id="1_3o2q4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sj1mi"]
+size = Vector2(233, 230)
+
+[node name="Parede" type="Node2D"]
+script = ExtResource("1_3o2q4")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_sj1mi")
